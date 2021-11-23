@@ -1,0 +1,15 @@
+<div *ngIf="film">
+    <div class="movie">
+        <div class="id">{{film.id+1}}</div>
+        <div class="title">
+            {{film.title}}
+        </div>
+        <div class="trailer">
+            <a href="{{film.trailer}}">Трэйлер</a>
+            <button *ngIf="!isItSaved" (click)="saveFilm(film.id)">Save</button>
+            <button *ngIf="isItSaved" (click)="unsaveFilm(film.id)">Del</button>
+        </div>
+    </div>
+
+
+</div>

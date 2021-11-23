@@ -1,0 +1,5 @@
+<br />
+<app-liter *ngFor="let item of stack, let index = index" [name]="item" (removeNameEmitToParent)='removeName(index)'></app-liter>
+
+<br />
+<input type="text" [(ngModel)]="newName"> <button (click)="addName()">Add</button>

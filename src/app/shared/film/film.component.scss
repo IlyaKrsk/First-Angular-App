@@ -1,0 +1,67 @@
+.movie {
+    display: flex;
+    position: relative;
+    width: 450px;
+    margin: 5px;
+    flex-wrap: wrap;
+    border: solid 1px #fff;
+    border-radius: 5px;
+    background-color: #fff;
+    .id {
+        width: 30px;
+        padding-top: 3px;
+        padding-bottom: 3px;
+        background-color: blueviolet;
+        text-align: center;
+        color: #fff;
+        border-radius: 5px 0 0 0;
+    }
+    .title {
+        padding-left: 3px;
+        padding-top: 3px;
+        padding-bottom: 3px;
+        width: calc(100% - 33px);
+        font-weight: bold;
+        border-radius: 0 5px 0 0;
+        white-space: nowrap;
+        overflow: hidden;
+        background-color: aquamarine;
+    }
+    .trailer {
+        padding-left: 33px;
+        padding-top: 3px;
+        padding-bottom: 3px;
+        width: 100%;
+        background-color: cornflowerblue;
+        border-radius: 0 0 5px 5px;
+        border-top: solid 2px #fff;
+        a {
+            color: rgb(66, 11, 216);
+            text-decoration: none;
+            text-transform: lowercase;
+        }
+        a:hover {
+            color: rgb(13, 241, 32);
+        }
+    }
+}
+
+button {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background-color: wheat;
+    border-radius: 30px;
+    border: solid 2px #fff;
+    height: 40px;
+    width: 40px;
+    padding: 0;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: rgb(89, 201, 89);
+    transform: scale(1.1);
+    color: rgb(235, 231, 29);
+    border: solid 2px rgb(235, 231, 29);
+}

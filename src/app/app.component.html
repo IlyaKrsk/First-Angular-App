@@ -1,0 +1,5 @@
+<div class="topper">
+    <button *ngFor="let button of navButtons" (click)="navigate(button.path)">{{button.buttonName}}</button>
+</div>
+
+<router-outlet></router-outlet>
