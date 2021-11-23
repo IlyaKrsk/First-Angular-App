@@ -1,0 +1,4 @@
+<div class="container">
+    saved
+    <app-film *ngFor="let item of savedList; let even = even" [class.even]="even" [film]="item" [isItSaved]="true" (unsaveFilmEmitToParent)='removeFilm(item.id)'></app-film>
+</div>
