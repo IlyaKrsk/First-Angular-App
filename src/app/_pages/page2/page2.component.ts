@@ -9,6 +9,7 @@ import { FormsModule } from '@angular/forms';
 export class Page2Component implements OnInit {
   
   newName ='';
+  count:number = 0;
 
   
 
@@ -21,6 +22,13 @@ export class Page2Component implements OnInit {
 
   }
 
+  countPlus() {
+    this.count++;
+  }
+
+  countMinus() {
+    this.count--;
+  }
   getStackFromLocalStorage() {
       return JSON.parse(localStorage.getItem('savedStack') as string) || [];
     }
