@@ -1,24 +1,43 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, OnDestroy, Pipe, PipeTransform } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-page2',
   templateUrl: './page2.component.html',
   styleUrls: ['./page2.component.scss']
 })
-export class Page2Component implements OnInit {
+export class Page2Component implements OnInit, OnDestroy {
   
   newName ='';
   count:number = 0;
+  exampleDate = "abc fasd fdasf asd asdf df asdf adsf asdf asdf asd fasd ";
 
   
 
   stack: string[] = [];
 
-  constructor() { }
+  constructor(private route:ActivatedRoute, private router: Router) { }
 
   ngOnInit(): void {
+
+    
+
     this.stack = this.getStackFromLocalStorage();
+
+    console.log('route', this.router )
+
+    this.route.queryParams.subscribe(() => {
+      console.log('route', this.router )
+    })
+
+    
+
+  }
+
+  ngOnDestroy(): void {
+    
+    console.log('Дестрой Page2', )
 
   }
 

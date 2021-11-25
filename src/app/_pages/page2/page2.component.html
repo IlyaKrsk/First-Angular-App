@@ -7,3 +7,15 @@
 <h1>Count:{{count}}</h1>
 <button (click)="countPlus()">+</button>
 <button (click)="countMinus()">-</button>
+
+<br />
+<button >Some BTN</button>
+
+<br/>
+
+<p>
+    Transformed date:
+    {{ exampleDate | cutText: 2 }}
+<br />
+    {{ 'exampleDate' | cutText: 20 }}
+  </p>
